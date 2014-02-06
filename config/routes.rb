@@ -1,4 +1,5 @@
 Evernote::Application.routes.draw do
+  devise_for :users
   get "store/index"
   get "store/about"
   get "store/features"
