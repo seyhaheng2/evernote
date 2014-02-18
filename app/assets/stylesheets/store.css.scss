@@ -1,6 +1,9 @@
 // Place all the styles related to the store controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'font-awesome';
+
 .pad-b {
 	padding-bottom: 20px;	
 }
@@ -23,7 +26,7 @@
 ul.list li{
 	display:inline;
 	a{
-		padding: 13px;
+		padding: 11px;
 		color: #333333;
 		opacity: 0.7;
 	}
@@ -74,13 +77,15 @@ ul.list li{
 		font-size: 13px;
 	}
 	img{
-		animation-name: zoom-image;
-		animation-play-state: paused;
-		animation-iteration-count:2;
-		animation-duration: 2s;
-		animation-direction: alternate;
+		transition: transform 2.5s ease;
+		-webkit-transition: -webkit-transform 2.5s ease;
+		-moz-transition: -moz-transform 2.5s ease;
+		-o-transition: -o-transform 2.5s ease;
 		&:hover{
-		     animation-play-state: running;
+			transform: rotate(360deg);
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
 		}
 		
 	}
@@ -88,24 +93,6 @@ ul.list li{
 		opacity: 0.6;
 	}
 }
-@-webkit-keyframes zoom-image {
-	from { transform: scale(1.1) rotate(0deg);  }
-	to { transform: scale(0.5) rotate(360deg) }
-}
-@-o-keyframes zoom-image {
-	from { transform: scale(1.1) rotate(0deg);  }
-	to { transform: scale(0.5) rotate(360deg) }
-}
-@-moz-keyframes zoom-image {
-	from { transform: scale(1.1) rotate(0deg);  }
-	to { transform: scale(0.5) rotate(360deg) }
-}
-@keyframes zoom-image {
-	from { transform: scale(1.1) rotate(0deg);  }
-	to { transform: scale(0.5) rotate(360deg) }
-}
-
-
 .large-12{
 	h1{
 		font-size: 30px;
@@ -180,11 +167,10 @@ ul.list li{
 }
 
 
+
 @media only screen and (max-width: 768px) {
-	.small-12 {
-		text-align: center;
+
 	h2{
-		text-align: center;
 		text-transform: uppercase;
 	}
 	p{
@@ -201,26 +187,11 @@ ul.list li{
 	.button{
 		margin:0px;
 		padding: 15px;
-		background: #333333;
 		position: absolute;
 		margin-left: 90px;
 		margin-top: 108px;
 		display:none;
 	}
+
 }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

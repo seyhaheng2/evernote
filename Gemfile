@@ -6,9 +6,11 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'carrierwave'
 gem 'better_errors'
+gem 'omniauth'
+gem 'font-awesome-sass'
+gem 'omniauth-twitter'
 
 # Use sqlite3 as the database for Active Record
-
 group :production do
   gem 'pg'
   gem 'rails_12factor'
